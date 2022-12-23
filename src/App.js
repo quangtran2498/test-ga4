@@ -1,6 +1,6 @@
 import "./App.css";
 import ReactGA from "react-ga4";
-ReactGA.initialize("G-QLLWFJT0CW");
+ReactGA.initialize("G-VZ6T7SQ29E");
 const OnGa = () => {
   ReactGA.event({
     category: "your category",
