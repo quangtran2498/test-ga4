@@ -1,6 +1,7 @@
 import "./App.css";
 import ReactGA from "react-ga4";
 ReactGA.initialize("G-VZ6T7SQ29E");
+ReactGA.send("pageview");
 const OnGa = () => {
   ReactGA.event({
     category: "your category",
@@ -14,6 +15,7 @@ const OnGa = () => {
   });
   ReactGA.gtag("event", "quang test", {
     event_action: "quang test gtag",
+    abc: "abc",
   });
 };
 function App() {
