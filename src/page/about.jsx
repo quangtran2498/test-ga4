@@ -12,7 +12,7 @@ const About = () => {
       event_action: "quang test gtag",
       about: "12345",
     });
-    navigate("/");
+    navigate("/dasboard");
   };
   return (
     <div>

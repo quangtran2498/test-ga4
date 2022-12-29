@@ -3,6 +3,7 @@ import ReactGA from "react-ga4";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./page/home";
 import About from "./page/about";
+import Dasboard from "./page/dasboard";
 //!
 ReactGA.initialize("G-VZ6T7SQ29E");
 ReactGA.send("pageview");
@@ -31,6 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/dasboard" element={<Dasboard />} />
       </Routes>
     </div>
   );
