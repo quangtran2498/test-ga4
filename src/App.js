@@ -17,7 +17,7 @@ const OnGa = () => {
 
   ReactGA.gtag("event", "quang test", {
     event_action: "quang test gtag",
-    abc: testRamdomNumber,
+    abc: "12345",
   });
 };
 function App() {
