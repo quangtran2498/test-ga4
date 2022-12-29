@@ -7,7 +7,7 @@ import Dasboard from "./page/dasboard";
 //!
 ReactGA.initialize("G-VZ6T7SQ29E");
 // ReactGA.send("pageview");
-const OnGa = () => {
+const createEvent = () => {
   // ReactGA.event({
   //   category: "your category",
   //   action: "your action",
@@ -22,17 +22,21 @@ const OnGa = () => {
     event_action: "quang test gtag",
     abc: "quang test thanh cong",
   });
-  ReactGA.gtag("event", "quang test lan 2", {
+};
+const createEvent2 = () => {
+  ReactGA.gtag("event", "create event", {
     event_action: "quang test gtag",
-    abc: "quang test thanh cong 2",
+    abc: "hihi",
   });
 };
-console.log("dasda", ReactGA.gtag);
-console.log("dasdsa", window["gtag"]);
+// console.log("dasda", ReactGA.gtag);
+// console.log("dasdsa", window["gtag"]);
 function App() {
   return (
     <div className="App">
-      <div onClick={OnGa}>quang test ga4 </div>
+      <div onClick={createEvent}>quang test ga4 </div>
+      <div onClick={createEvent2}>quang test ga4 </div>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

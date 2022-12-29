@@ -7,10 +7,10 @@ const About = () => {
   const navigate = useNavigate();
 
   const createEvent = () => {
-    ReactGA.gtag("event", "create add event", {
-      event_action: "quang test gtag",
-      about: "12345",
-    });
+    // ReactGA.gtag("event", "create add event", {
+    //   event_action: "quang test gtag",
+    //   about: "12345",
+    // });
     // const gtag = window["gtag"];
     // gtag("event", "about", {
     //   about: "1234566778",
