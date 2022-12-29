@@ -18,10 +18,10 @@ const createEvent = () => {
   //   quangtest: "1234", //! ko nhận
   //   dimension: "quang test",
   // });
-  // ReactGA.gtag("event", "quang test", {
-  //   event_action: "quang test gtag",
-  //   abc: "quang test thanh cong",
-  // });
+  ReactGA.gtag("event", "quang test", {
+    event_action: "quang test gtag",
+    abc: "31312312312",
+  });
 };
 const createEvent2 = () => {
   ReactGA.gtag("event", "create event", {
@@ -34,8 +34,8 @@ const createEvent2 = () => {
 function App() {
   return (
     <div className="App">
-      <div onClick={createEvent}>quang test ga4 </div>
-      <div onClick={createEvent2}>quang test ga4 </div>
+      <div onClick={createEvent}>create event 1</div>
+      <div onClick={createEvent2}>create event 2</div>
 
       <Routes>
         <Route path="/" element={<Home />} />
