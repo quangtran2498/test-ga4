@@ -8,16 +8,16 @@ import Dasboard from "./page/dasboard";
 ReactGA.initialize("G-VZ6T7SQ29E");
 ReactGA.send("pageview");
 const OnGa = () => {
-  ReactGA.event({
-    category: "your category",
-    action: "your action",
-    label: "your label", // optional
-    value: 99, // optional, must be a number
-    nonInteraction: true, // optional, true/false
-    transport: "xhr", // optional
-    quangtest: "1234", //! ko nhận
-    dimension: "quang test",
-  });
+  // ReactGA.event({
+  //   category: "your category",
+  //   action: "your action",
+  //   label: "your label", // optional
+  //   value: 99, // optional, must be a number
+  //   nonInteraction: true, // optional, true/false
+  //   transport: "xhr", // optional
+  //   quangtest: "1234", //! ko nhận
+  //   dimension: "quang test",
+  // });
   const testRamdomNumber = Math.floor(Math.random());
 
   ReactGA.gtag("event", "quang test", {
