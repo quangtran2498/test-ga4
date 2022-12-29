@@ -1,5 +1,9 @@
 import "./App.css";
 import ReactGA from "react-ga4";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./page/home";
+import About from "./page/about";
+//!
 ReactGA.initialize("G-VZ6T7SQ29E");
 ReactGA.send("pageview");
 const OnGa = () => {
@@ -24,6 +28,10 @@ function App() {
   return (
     <div className="App">
       <div onClick={OnGa}>quang test ga4 </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
   );
 }
