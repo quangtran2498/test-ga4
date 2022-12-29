@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./page/home";
 import About from "./page/about";
 import Dasboard from "./page/dasboard";
+import gtag from "./page/gtag";
 //!
 ReactGA.initialize("G-VZ6T7SQ29E");
 // ReactGA.send("pageview");
@@ -29,13 +30,26 @@ const createEvent2 = () => {
     abc: "hihi",
   });
 };
+const createEvent3 = () => {
+  gtag("event", "create event gtag", {
+    test: "12132131231",
+  });
+};
+
 // console.log("dasda", ReactGA.gtag);
 // console.log("dasdsa", window["gtag"]);
 function App() {
   return (
     <div className="App">
-      <div onClick={createEvent}>create event 1</div>
-      <div onClick={createEvent2}>create event 2</div>
+      <div style={style} onClick={createEvent}>
+        create event 1
+      </div>
+      <div style={style} onClick={createEvent2}>
+        create event 2
+      </div>
+      <div style={style} onClick={createEvent3}>
+        create event 3
+      </div>
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -47,3 +61,7 @@ function App() {
 }
 
 export default App;
+const style = {
+  paddingBottom: "20px",
+  cursor: "pointer",
+};
