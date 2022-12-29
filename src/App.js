@@ -18,10 +18,10 @@ const createEvent = () => {
   //   quangtest: "1234", //! ko nhận
   //   dimension: "quang test",
   // });
-  ReactGA.gtag("event", "quang test", {
-    event_action: "quang test gtag",
-    abc: "quang test thanh cong",
-  });
+  // ReactGA.gtag("event", "quang test", {
+  //   event_action: "quang test gtag",
+  //   abc: "quang test thanh cong",
+  // });
 };
 const createEvent2 = () => {
   ReactGA.gtag("event", "create event", {
