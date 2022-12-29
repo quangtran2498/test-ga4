@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ReactGA from "react-ga4";
 // ReactGA.initialize("G-VZ6T7SQ29E");
 ReactGA.send({ hitType: "pageview", page: "/about" });

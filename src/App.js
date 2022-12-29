@@ -22,6 +22,10 @@ const OnGa = () => {
     event_action: "quang test gtag",
     abc: "quang test thanh cong",
   });
+  ReactGA.gtag("event", "quang test lan 2", {
+    event_action: "quang test gtag",
+    abc: "quang test thanh cong 2",
+  });
 };
 console.log("dasda", ReactGA.gtag);
 console.log("dasdsa", window["gtag"]);
