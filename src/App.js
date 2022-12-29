@@ -6,7 +6,7 @@ import About from "./page/about";
 import Dasboard from "./page/dasboard";
 //!
 ReactGA.initialize("G-VZ6T7SQ29E");
-ReactGA.send("pageview");
+// ReactGA.send("pageview");
 const OnGa = () => {
   // ReactGA.event({
   //   category: "your category",
@@ -18,11 +18,9 @@ const OnGa = () => {
   //   quangtest: "1234", //! ko nhận
   //   dimension: "quang test",
   // });
-  const testRamdomNumber = Math.floor(Math.random());
-
   ReactGA.gtag("event", "quang test", {
     event_action: "quang test gtag",
-    abc: `${testRamdomNumber}`,
+    abc: "quang test thanh cong",
   });
 };
 console.log("dasda", ReactGA.gtag);
