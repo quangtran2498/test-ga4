@@ -13,11 +13,11 @@ const OnGa = () => {
     quangtest: "1234", //! ko nhận
     dimension: "quang test",
   });
-  const testRamdomNumber = Math.random();
+  const testRamdomNumber = Math.floor(Math.random());
 
   ReactGA.gtag("event", "quang test", {
     event_action: "quang test gtag",
-    abc: "12345",
+    abc: `${testRamdomNumber}`,
   });
 };
 function App() {
