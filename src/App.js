@@ -25,6 +25,8 @@ const OnGa = () => {
     abc: `${testRamdomNumber}`,
   });
 };
+console.log("dasda", ReactGA.gtag);
+console.log("dasdsa", window["gtag"]);
 function App() {
   return (
     <div className="App">
