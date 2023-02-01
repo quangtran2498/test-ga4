@@ -24,6 +24,8 @@ const createEvent = () => {
   ReactGA.gtag("event", "quang test", {
     event_action: "quang test gtag",
     abc: "31312312312",
+    engagement_time_msec: "100",
+    session_id: "123",
   });
   console.log("get time", new Date().getTime());
 };
@@ -31,12 +33,16 @@ const createEvent2 = () => {
   ReactGA.gtag("event", "create event", {
     event_action: "quang test gtag",
     abc: "hihi",
+    engagement_time_msec: "100",
+    session_id: "123",
   });
   console.log("get time", new Date().getTime());
 };
 const createEvent3 = () => {
   gtag("event", "create event gtag", {
     test: "12132131231",
+    engagement_time_msec: "100",
+    session_id: "123",
   });
 };
 var test = { abc: new Date().getTime() };
