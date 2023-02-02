@@ -53,13 +53,13 @@ function App() {
   return (
     <div className="App">
       <div style={style} onClick={createEvent}>
-        create event 1
+        create event by methor ga
       </div>
       <div style={style} onClick={createEvent2}>
-        create event 2
+        create event by methor ga
       </div>
       <div style={style} onClick={testApiGa}>
-        create event 3
+        create event by api ga
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
