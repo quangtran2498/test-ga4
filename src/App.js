@@ -14,7 +14,7 @@ const api_secret = "dH0ZWqTvReWoYTUJiVK9Vw"
   fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`, {
   method: "POST",
   body: JSON.stringify({
-    client_id: '12345.12345',
+    client_id: '225262123.1671789778',
     events: [{
       name: 'push event',
       params: {
@@ -55,7 +55,6 @@ const createEvent2 = () => {
   // console.log("get time", new Date().getTime());
 };
 const createEvent3 = () => {
-  testApiGa()
   gtag("event", "create event gtag", {
     test: "12132131231",
     engagement_time_msec: new Date().getTime(),
