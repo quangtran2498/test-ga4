@@ -7,36 +7,32 @@ import Dasboard from "./page/dasboard";
 import gtag from "./page/gtag";
 //!
 ReactGA.initialize("G-VZ6T7SQ29E");
-const measurement_id = "G-VZ6T7SQ29E"
-const api_secret = "dH0ZWqTvReWoYTUJiVK9Vw"
 // ReactGA.initialize("G-GL0NXS0STE");
- const testApiGa = () => {
-  fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`, {
-  method: "POST",
-  body: JSON.stringify({
-    client_id: '225262123.1671789778',
-    events: [{
-      name: 'push event',
-      params: {
-        quangTestPushEvent:"da lam"
-      },
-    }]
-  })
-});
- }
+const measurement_id = "G-VZ6T7SQ29E";
+const api_secret = "dH0ZWqTvReWoYTUJiVK9Vw";
+const testApiGa = () => {
+  fetch(
+    `https://www.google-analytics.com/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`,
+    {
+      method: "POST",
+      body: JSON.stringify({
+        client_id: "225262123.1671789778",
+        events: [
+          {
+            name: "push event",
+            params: {
+              quangTestPushEvent: "da lam",
+              engagement_time_msec: "100",
+              session_id: "123",
+            },
+          },
+        ],
+      }),
+    }
+  );
+};
 // ReactGA.send("pageview");
 const createEvent = () => {
-  // ReactGA.event({
-  //   category: "your category",
-  //   action: "your action",
-  //   label: "your label", // optional
-  //   value: 99, // optional, must be a number
-  //   nonInteraction: true, // optional, true/false
-  //   transport: "xhr", // optional
-  //   // quangtest: "1234", //! ko nhận
-  //   dimension: "quang test",
-  // });
-  testApiGa()
   ReactGA.gtag("event", "quang test", {
     event_action: "quang test gtag",
     abc: "31312312312",
@@ -45,23 +41,13 @@ const createEvent = () => {
   });
 };
 const createEvent2 = () => {
-  testApiGa()
   ReactGA.gtag("event", "create event", {
     event_action: "quang test gtag",
     abc: "hihi",
-    engagement_time_msec: new Date().getTime(),
-    session_id: "123",
-  });
-  // console.log("get time", new Date().getTime());
-};
-const createEvent3 = () => {
-  gtag("event", "create event gtag", {
-    test: "12132131231",
-    engagement_time_msec: new Date().getTime(),
+    engagement_time_msec:"100",
     session_id: "123",
   });
 };
-
 
 function App() {
   return (
@@ -72,7 +58,7 @@ function App() {
       <div style={style} onClick={createEvent2}>
         create event 2
       </div>
-      <div style={style} onClick={createEvent3}>
+      <div style={style} onClick={testApiGa}>
         create event 3
       </div>
       <Routes>
