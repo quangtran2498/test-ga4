@@ -6,8 +6,8 @@ import About from "./page/about";
 import Dasboard from "./page/dasboard";
 import gtag from "./page/gtag";
 //!
-// ReactGA.initialize("G-VZ6T7SQ29E");
-ReactGA.initialize("G-GL0NXS0STE");
+ReactGA.initialize("G-VZ6T7SQ29E");
+// ReactGA.initialize("G-GL0NXS0STE");
 
 // ReactGA.send("pageview");
 const createEvent = () => {
