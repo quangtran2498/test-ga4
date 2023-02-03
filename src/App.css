@@ -87,3 +87,8 @@
   border-color: yellow;
   transform: rotate(250deg);
 }
+
+.high-light:active {
+  background-color: red;
+  color: white;
+}

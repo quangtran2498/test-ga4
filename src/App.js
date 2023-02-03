@@ -5,6 +5,7 @@ import Home from "./page/home";
 import About from "./page/about";
 import Dasboard from "./page/dasboard";
 import gtag from "./page/gtag";
+
 //!
 ReactGA.initialize("G-VZ6T7SQ29E");
 // ReactGA.initialize("G-GL0NXS0STE");
@@ -48,30 +49,58 @@ const createEvent2 = () => {
     session_id: "123",
   });
 };
+const createEventOnIosWithNormalWeb = () => {
+  ReactGA.gtag("event", "On Ios With NormalWeb", {
+    event_action: "quang test gtag",
+    abc: "hihi",
+    engagement_time_msec:"100",
+    session_id: "123",
+    content:'đã tạo được event trên ios với web thông thường'
+  });
+};
 
+const createEventOnAndroidWithZaloMiniApp = () => {
+  ReactGA.gtag("event", "On Android With ZaloMiniApp", {
+    event_action: "quang test gtag",
+    abc: "hihi",
+    engagement_time_msec:"100",
+    session_id: "123",
+    content:'đã tạo được event trên android với zalo mini app'
+
+  });
+};
 function App() {
   return (
     <div className="App">
-      <div style={style} onClick={createEvent}>
+      <div className="high-light" style={style} onClick={createEvent}>
         create event by methor ga
       </div>
-      <div style={style} onClick={createEvent2}>
+      <div className="high-light" style={style} onClick={createEvent2}>
         create event by methor ga
       </div>
-      <div style={style} onClick={testApiGa}>
+      <div className="high-light" style={style} onClick={testApiGa}>
         create event by api ga
       </div>
-      <Routes>
+      <div className="high-light" style={style} onClick={createEventOnAndroidWithZaloMiniApp}>
+        Tạo event trên android với web bình thường
+      </div>
+      <div className="high-light" style={style} onClick={createEventOnIosWithNormalWeb}>
+        Tạo event trên ios với web bình thường
+      </div>
+     
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/dasboard" element={<Dasboard />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
 
 export default App;
 const style = {
-  paddingBottom: "20px",
   cursor: "pointer",
+  padding:"20px",
+  width:"fit-content",
+  margin:"0 auto"
 };
